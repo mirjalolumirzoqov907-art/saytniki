@@ -15,8 +15,12 @@ load_dotenv()
 OPENAI_KEY = os.environ.get("OPENAI_KEY")
 TAVILY_KEY = os.environ.get("TAVILY_KEY")
 JWT_SECRET = os.environ.get("JWT_SECRET", "asliddin_ai_secret_2025")
-DB_PATH    = "asliddin_web.db"
-HTML_FILE  = "asliddin-ai-v2.html"
+DB_PATH = "asliddin_web.db"
+HTML_FILE = "asliddin-ai-v2.html"
+# Quyidagilar yetishmayapti:
+JWT_EXPIRE = 7
+RATE_LIMIT_SECS = 60
+RATE_LIMIT_COUNT = 20
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s", datefmt="%H:%M:%S",
     handlers=[logging.StreamHandler(), logging.FileHandler("web.log", encoding="utf-8")])
