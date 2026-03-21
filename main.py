@@ -8,10 +8,6 @@ from typing import Optional
 import sqlite3, hashlib, jwt, re, random, os, logging
 from datetime import datetime, timedelta
 from openai import OpenAI
-
-logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s", datefmt="%H:%M:%S",
-    handlers=[logging.StreamHandler(), logging.FileHandler("web.log", encoding="utf-8")])
-log = logging.getLogger("AsliddinWeb")
 from dotenv import load_dotenv
 import os
 load_dotenv()
@@ -19,6 +15,14 @@ load_dotenv()
 OPENAI_KEY = os.environ.get("OPENAI_KEY")
 TAVILY_KEY = os.environ.get("TAVILY_KEY")
 JWT_SECRET = os.environ.get("JWT_SECRET", "asliddin_ai_secret_2025")
+DB_PATH    = "asliddin_web.db"
+HTML_FILE  = "asliddin-ai-v2.html"
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s", datefmt="%H:%M:%S",
+    handlers=[logging.StreamHandler(), logging.FileHandler("web.log", encoding="utf-8")])
+log = logging.getLogger("AsliddinWeb")
+
+
 
 client = OpenAI(api_key=OPENAI_KEY)
 app    = FastAPI(title="Asliddin AI API", version="3.0")
