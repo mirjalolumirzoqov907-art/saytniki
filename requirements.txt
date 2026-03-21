@@ -1,0 +1,11 @@
+pyTelegramBotAPI
+openai
+pdf2docx
+opencv-python-headless
+fastapi
+uvicorn
+openai
+pyjwt
+tavily-python
+python-multipart
+python-dotenv
