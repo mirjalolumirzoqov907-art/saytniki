@@ -436,8 +436,4 @@ def favicon():
 
 if __name__ == "__main__":
     import uvicorn
-    log.info("=" * 60)
-    log.info("ASLIDDIN AI WEB SERVER v3.0 — ISHGA TUSHDI")
-    log.info("http://localhost:8000")
-    log.info("=" * 60)
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=8080, reload=True) # 8000 ni 8080 qiling
