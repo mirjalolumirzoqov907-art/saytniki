@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Asliddin AI</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><clipPath id='c'><circle cx='16' cy='16' r='16'/></clipPath><image href='https://github.com/mirjalolumirzoqov907-art.png' width='32' height='32' clip-path='url(%23c)'/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -12,54 +13,86 @@
 :root{--bg:#070712;--bg1:#0d0d1e;--bg2:#12122a;--bg3:#181834;--bg4:#1e1e3e;--v1:#7c6af5;--v2:#ff6bac;--v3:#00d4ff;--v4:#7fff6e;--text:#ededff;--t2:#7777aa;--t3:#3a3a66;--bdr:rgba(124,106,245,.15);--bdr2:rgba(124,106,245,.28);--f:'Outfit',sans-serif;--fm:'JetBrains Mono',monospace}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;overflow:hidden}
+
+
 #bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.bl{position:absolute;border-radius:50%;filter:blur(90px);opacity:.15;animation:blf 14s ease-in-out infinite}
-.bl1{width:600px;height:600px;background:var(--v1);top:-150px;left:-150px;animation-delay:0s}
-.bl2{width:500px;height:500px;background:var(--v2);bottom:-100px;right:-100px;animation-delay:-5s}
-.bl3{width:350px;height:350px;background:var(--v3);top:35%;left:45%;animation-delay:-9s}
-@keyframes blf{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-50px) scale(1.08)}66%{transform:translate(-30px,35px) scale(.95)}}
+.bl{position:absolute;border-radius:50%;filter:blur(90px);opacity:.18;animation:blf 14s ease-in-out infinite}
+.bl1{width:650px;height:650px;background:var(--v1);top:-200px;left:-200px;animation-delay:0s}
+.bl2{width:550px;height:550px;background:var(--v2);bottom:-150px;right:-150px;animation-delay:-5s}
+.bl3{width:400px;height:400px;background:var(--v3);top:30%;left:40%;animation-delay:-9s}
+.bl4{width:300px;height:300px;background:#ff9f43;top:60%;left:10%;animation-delay:-3s;opacity:.1}
+@keyframes blf{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(50px,-60px) scale(1.1)}50%{transform:translate(-30px,40px) scale(.92)}75%{transform:translate(30px,20px) scale(1.05)}}
+
+
+#grid{position:fixed;inset:0;z-index:0;pointer-events:none;background-image:linear-gradient(rgba(124,106,245,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(124,106,245,.04) 1px,transparent 1px);background-size:60px 60px;animation:gridMove 20s linear infinite}
+@keyframes gridMove{0%{background-position:0 0}100%{background-position:60px 60px}}
+
+
 #cur{position:fixed;width:10px;height:10px;background:var(--v1);border-radius:50%;pointer-events:none;z-index:99999;transition:transform .12s;mix-blend-mode:screen;margin-left:-5px;margin-top:-5px}
 #curR{position:fixed;width:34px;height:34px;border:1.5px solid rgba(124,106,245,.45);border-radius:50%;pointer-events:none;z-index:99998;transition:all .3s cubic-bezier(.23,1,.32,1);margin-left:-17px;margin-top:-17px}
+
+
 #LP{position:fixed;inset:0;z-index:500;display:flex;align-items:center;justify-content:center;transition:opacity .6s,transform .6s}
 #LP.out{opacity:0;transform:scale(1.07) translateY(-24px);pointer-events:none}
-.ring-wrap{position:absolute;width:460px;height:460px;display:flex;align-items:center;justify-content:center}
+.ring-wrap{position:absolute;width:500px;height:500px;display:flex;align-items:center;justify-content:center}
 .ring-svg{position:absolute;animation:rspin 20s linear infinite}
 .ring-svg2{animation:rspin 30s linear infinite reverse;opacity:.4}
+.ring-svg3{animation:rspin 15s linear infinite;opacity:.25}
 @keyframes rspin{to{transform:rotate(360deg)}}
-.lcard{position:relative;z-index:10;width:400px;background:rgba(13,13,30,.93);border:1px solid var(--bdr2);border-radius:26px;padding:44px 38px;box-shadow:0 8px 60px rgba(0,0,0,.7),0 0 80px rgba(124,106,245,.12);backdrop-filter:blur(36px);animation:cin .8s cubic-bezier(.34,1.56,.64,1) both}
-@keyframes cin{from{opacity:0;transform:scale(.85) translateY(28px)}to{opacity:1;transform:scale(1) translateY(0)}}
+
+.lcard{position:relative;z-index:10;width:400px;background:rgba(10,10,25,.95);border:1px solid var(--bdr2);border-radius:26px;padding:40px 36px 32px;box-shadow:0 8px 60px rgba(0,0,0,.8),0 0 80px rgba(124,106,245,.15);backdrop-filter:blur(40px);animation:cin .8s cubic-bezier(.34,1.56,.64,1) both}
+@keyframes cin{from{opacity:0;transform:scale(.85) translateY(30px)}to{opacity:1;transform:scale(1) translateY(0)}}
 .lcard::before{content:'';position:absolute;inset:-1px;border-radius:27px;background:linear-gradient(135deg,rgba(124,106,245,.5),rgba(255,107,172,.3),rgba(0,212,255,.15),transparent 60%);z-index:-1;opacity:.7}
-.ll{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:8px}
-.lgem{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,var(--v1),var(--v2));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:19px;color:#fff;box-shadow:0 6px 28px rgba(124,106,245,.5);animation:gp 3s ease-in-out infinite;flex-shrink:0}
+
+.ll{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:6px}
+.lgem{width:48px;height:48px;border-radius:13px;background:linear-gradient(135deg,var(--v1),var(--v2));display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px;color:#fff;box-shadow:0 6px 28px rgba(124,106,245,.5);animation:gp 3s ease-in-out infinite;flex-shrink:0}
 @keyframes gp{0%,100%{box-shadow:0 6px 28px rgba(124,106,245,.5)}50%{box-shadow:0 6px 40px rgba(255,107,172,.6)}}
-.lname{font-weight:900;font-size:27px;letter-spacing:-.5px;background:linear-gradient(90deg,var(--v1),var(--v2),var(--v3));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
+.lname{font-weight:900;font-size:26px;letter-spacing:-.5px;background:linear-gradient(90deg,var(--v1),var(--v2),var(--v3));background-size:200%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:gs 4s ease infinite}
 @keyframes gs{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
-.ltag{text-align:center;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--t3);margin-bottom:28px}
-.tabs{display:flex;background:rgba(255,255,255,.04);border-radius:12px;padding:4px;margin-bottom:22px;border:1px solid var(--bdr);gap:4px}
+.ltag{text-align:center;font-size:10.5px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--t3);margin-bottom:24px}
+
+.tabs{display:flex;background:rgba(255,255,255,.04);border-radius:12px;padding:4px;margin-bottom:20px;border:1px solid var(--bdr);gap:4px}
 .tab{flex:1;padding:9px;text-align:center;font-size:13px;font-weight:700;color:var(--t2);cursor:pointer;border-radius:9px;border:none;background:none;font-family:var(--f);transition:all .25s}
 .tab.on{background:linear-gradient(135deg,var(--v1),rgba(255,107,172,.85));color:#fff;box-shadow:0 4px 18px rgba(124,106,245,.4)}
+
 .aerr{background:rgba(255,80,80,.1);border:1px solid rgba(255,80,80,.3);color:#ff9999;padding:10px 14px;border-radius:11px;font-size:13px;margin-bottom:14px;display:none;animation:shake .3s ease}
 .aerr.on{display:block}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
-.fi{position:relative;margin-bottom:14px}
-.fi input{width:100%;padding:13px 44px 13px 16px;background:rgba(255,255,255,.05);border:1px solid var(--bdr2);border-radius:12px;color:var(--text);font-size:14px;font-family:var(--f);outline:none;transition:all .25s}
+
+.fi{position:relative;margin-bottom:13px}
+.fi input{width:100%;padding:12px 44px 12px 16px;background:rgba(255,255,255,.05);border:1px solid var(--bdr2);border-radius:12px;color:var(--text);font-size:14px;font-family:var(--f);outline:none;transition:all .25s}
 .fi input:focus{border-color:var(--v1);background:rgba(124,106,245,.08);box-shadow:0 0 0 3px rgba(124,106,245,.15)}
 .fi input::placeholder{color:var(--t3)}
 .fic{position:absolute;right:13px;top:50%;transform:translateY(-50%);color:var(--t2);cursor:pointer;transition:color .2s}
 .fic:hover{color:var(--v1)}
-.fgt{text-align:right;margin:-6px 0 16px}.fgt a{font-size:12px;color:var(--t3);text-decoration:none;transition:color .2s}.fgt a:hover{color:var(--v1)}
-.abtn{width:100%;padding:14px;background:linear-gradient(135deg,var(--v1),#9a5ef5,var(--v2));background-size:200%;border:none;border-radius:12px;color:#fff;font-size:14px;font-weight:800;font-family:var(--f);letter-spacing:.06em;cursor:pointer;transition:all .3s;box-shadow:0 6px 26px rgba(124,106,245,.45);position:relative;overflow:hidden}
+.fgt{text-align:right;margin:-5px 0 14px}.fgt a{font-size:12px;color:var(--t3);text-decoration:none;transition:color .2s}.fgt a:hover{color:var(--v1)}
+
+.abtn{width:100%;padding:13px;background:linear-gradient(135deg,var(--v1),#9a5ef5,var(--v2));background-size:200%;border:none;border-radius:12px;color:#fff;font-size:14px;font-weight:800;font-family:var(--f);letter-spacing:.06em;cursor:pointer;transition:all .3s;box-shadow:0 6px 26px rgba(124,106,245,.45);position:relative;overflow:hidden}
 .abtn:hover{background-position:right;transform:translateY(-2px);box-shadow:0 12px 36px rgba(124,106,245,.6)}
 .abtn:active{transform:scale(.97)}
-.dv{display:flex;align-items:center;gap:12px;margin:18px 0}.dv span{flex:1;height:1px;background:var(--bdr)}.dv p{font-size:12px;color:var(--t3)}
-.sr{display:flex;gap:8px}
-.sbtn2{flex:1;padding:10px;background:rgba(255,255,255,.04);border:1px solid var(--bdr2);border-radius:11px;color:var(--t2);font-size:12px;font-weight:600;font-family:var(--f);cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:6px}
-.sbtn2:hover{border-color:var(--v1);background:rgba(124,106,245,.12);color:#fff;transform:translateY(-2px)}
-.sico{width:18px;height:18px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800}
-.sico-g{background:#db4437;color:#fff}.sico-gh{background:#24292e;color:#fff}.sico-tg{background:#2aabee;color:#fff}
+
+.demo-btn{width:100%;padding:11px;background:rgba(255,255,255,.04);border:1px solid var(--bdr2);border-radius:12px;color:var(--t2);font-size:13px;font-weight:600;font-family:var(--f);cursor:pointer;transition:all .25s;margin-top:10px;display:flex;align-items:center;justify-content:center;gap:7px}
+.demo-btn:hover{border-color:var(--v3);color:var(--v3);background:rgba(0,212,255,.06);transform:translateY(-1px)}
+.demo-btn svg{opacity:.7}
+
+.dv{display:flex;align-items:center;gap:12px;margin:16px 0}.dv span{flex:1;height:1px;background:var(--bdr)}.dv p{font-size:12px;color:var(--t3)}
+
+
+.socials{display:flex;gap:8px;margin-top:4px}
+.slink{flex:1;padding:9px 6px;background:rgba(255,255,255,.04);border:1px solid var(--bdr2);border-radius:11px;color:var(--t2);font-size:11px;font-weight:600;font-family:var(--f);cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:5px;text-decoration:none}
+.slink:hover{transform:translateY(-2px)}
+.slink.tg{border-color:rgba(42,171,238,.3)}.slink.tg:hover{border-color:#2aabee;background:rgba(42,171,238,.1);color:#2aabee}
+.slink.ig{border-color:rgba(225,48,108,.3)}.slink.ig:hover{border-color:#e1306c;background:rgba(225,48,108,.1);color:#e1306c}
+.slink.gm{border-color:rgba(219,68,55,.3)}.slink.gm:hover{border-color:#db4437;background:rgba(219,68,55,.1);color:#db4437}
+.sico2{width:18px;height:18px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;flex-shrink:0}
+.sico2.tg{background:#2aabee;color:#fff}
+.sico2.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff}
+.sico2.gm{background:#db4437;color:#fff}
+
+/* CHAT APP */
 #CA{display:none;height:100vh;position:relative;z-index:10}
 #CA.on{display:flex}
-.sb{width:268px;min-width:268px;background:rgba(10,10,22,.96);border-right:1px solid var(--bdr);display:flex;flex-direction:column;backdrop-filter:blur(24px);transition:transform .3s cubic-bezier(.4,0,.2,1);z-index:100;position:relative}
+.sb{width:268px;min-width:268px;background:rgba(8,8,20,.97);border-right:1px solid var(--bdr);display:flex;flex-direction:column;backdrop-filter:blur(24px);transition:transform .3s cubic-bezier(.4,0,.2,1);z-index:100;position:relative}
 .sb::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--v1),var(--v2),transparent);opacity:.5}
 .sbh{padding:22px 18px 16px;border-bottom:1px solid var(--bdr)}
 .sbl{display:flex;align-items:center;gap:10px;margin-bottom:16px}
@@ -79,12 +112,22 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;ov
 .delbtn{background:none;border:none;color:var(--t3);cursor:pointer;padding:2px 5px;border-radius:4px;font-size:11px;opacity:0;transition:all .15s}
 .crow:hover .delbtn{opacity:1}.delbtn:hover{color:#ff7070;background:rgba(255,112,112,.15)}
 .sbf{padding:14px;border-top:1px solid var(--bdr)}
+
+/* SIDEBAR SOCIALS */
+.sb-socials{display:flex;gap:6px;margin-bottom:10px}
+.sb-sl{flex:1;height:32px;border-radius:8px;display:flex;align-items:center;justify-content:center;text-decoration:none;border:1px solid var(--bdr);transition:all .2s;color:var(--t3)}
+.sb-sl:hover{transform:translateY(-2px)}
+.sb-sl.tg:hover{border-color:#2aabee;background:rgba(42,171,238,.12);color:#2aabee}
+.sb-sl.ig:hover{border-color:#e1306c;background:rgba(225,48,108,.12);color:#e1306c}
+.sb-sl.gm:hover{border-color:#db4437;background:rgba(219,68,55,.12);color:#db4437}
+
 .urow{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.04);cursor:pointer;transition:all .2s;border:1px solid var(--bdr)}
 .urow:hover{background:rgba(124,106,245,.1);border-color:var(--bdr2)}
 .uav{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--v1),var(--v2));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:#fff;box-shadow:0 3px 12px rgba(124,106,245,.35);flex-shrink:0}
 .ui{flex:1;min-width:0}.un{font-size:13px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.up{font-size:11px;color:var(--t3)}
 .lout{width:28px;height:28px;border-radius:7px;background:none;border:1px solid var(--bdr);color:var(--t2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0}
 .lout:hover{border-color:#ff7070;color:#ff9999;background:rgba(255,112,112,.1)}
+
 .mn{flex:1;display:flex;flex-direction:column;min-width:0;position:relative}
 .tb{height:58px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;padding:0 20px;gap:12px;background:rgba(7,7,18,.88);backdrop-filter:blur(20px);position:relative;z-index:10}
 .tb::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(124,106,245,.4),rgba(255,107,172,.3),transparent)}
@@ -96,8 +139,10 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;ov
 @keyframes sp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.65)}}
 .trbtn{width:34px;height:34px;border-radius:11px;background:rgba(255,255,255,.04);border:1px solid var(--bdr);color:var(--t2);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .trbtn:hover{border-color:#ff7070;color:#ff9999;background:rgba(255,112,112,.1)}
+
 .ca{flex:1;overflow-y:auto;padding:32px 0 20px;scroll-behavior:smooth}
 .ca::-webkit-scrollbar{width:5px}.ca::-webkit-scrollbar-thumb{background:rgba(124,106,245,.2);border-radius:5px}
+
 .wlc{max-width:640px;margin:28px auto;padding:0 28px;text-align:center;animation:win .7s cubic-bezier(.34,1.56,.64,1) both}
 @keyframes win{from{opacity:0;transform:translateY(28px) scale(.95)}to{opacity:1;transform:translateY(0) scale(1)}}
 .worb{width:90px;height:90px;border-radius:24px;margin:0 auto 26px;background:linear-gradient(135deg,var(--v1),var(--v2),var(--v3));background-size:200%;animation:gs 4s ease infinite,gp 3s ease-in-out infinite;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:30px;color:#fff;box-shadow:0 14px 52px rgba(124,106,245,.55),0 0 100px rgba(255,107,172,.18);position:relative}
@@ -113,6 +158,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;ov
 .sc:nth-child(3):hover{border-color:var(--v3);box-shadow:0 8px 28px rgba(0,212,255,.15)}
 .sc:nth-child(4):hover{border-color:var(--v4);box-shadow:0 8px 28px rgba(127,255,110,.12)}
 .si2{font-size:22px;margin-bottom:8px;display:block}.st{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px}.sd{font-size:11.5px;color:var(--t3);line-height:1.5}
+
 .mw{max-width:760px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;gap:24px}
 .msg{display:flex;gap:13px;animation:mi .3s ease}
 @keyframes mi{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -144,6 +190,7 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;ov
 .tyd span{width:8px;height:8px;border-radius:50%;background:var(--v1);animation:td 1.2s infinite}
 .tyd span:nth-child(2){animation-delay:.2s}.tyd span:nth-child(3){animation-delay:.4s}
 @keyframes td{0%,80%,100%{transform:scale(.5);opacity:.3}40%{transform:scale(1);opacity:1}}
+
 .ia{padding:16px 24px 24px;max-width:808px;margin:0 auto;width:100%}
 .iw{background:rgba(255,255,255,.04);border:1px solid var(--bdr2);border-radius:18px;transition:border-color .25s,box-shadow .25s;overflow:hidden}
 .iw:focus-within{border-color:var(--v1);box-shadow:0 0 0 3px rgba(124,106,245,.12),0 0 40px rgba(124,106,245,.1)}
@@ -163,39 +210,66 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;ov
 .toastEl{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(16px);background:var(--bg3);border:1px solid var(--bdr2);color:var(--text);padding:10px 20px;border-radius:24px;font-size:13px;font-weight:600;opacity:0;transition:all .3s;pointer-events:none;z-index:9999;white-space:nowrap;box-shadow:0 8px 32px rgba(0,0,0,.5)}
 .toastEl.on{opacity:1;transform:translateX(-50%) translateY(0)}
 .ovl{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:99;backdrop-filter:blur(4px)}.ovl.on{display:block}
-@media(max-width:768px){.sb{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%)}.sb.on{transform:translateX(0);box-shadow:0 0 80px rgba(0,0,0,.8)}.hbtn{display:flex!important}.sg{grid-template-columns:1fr}.wt{font-size:28px}.lcard{width:330px;padding:34px 26px}.ring-wrap{width:340px;height:340px}}
+@media(max-width:768px){.sb{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%)}.sb.on{transform:translateX(0);box-shadow:0 0 80px rgba(0,0,0,.8)}.hbtn{display:flex!important}.sg{grid-template-columns:1fr}.wt{font-size:28px}.lcard{width:330px;padding:32px 24px}.ring-wrap{width:360px;height:360px}}
 </style>
 </head>
 <body>
-<div id="bg"><div class="bl bl1"></div><div class="bl bl2"></div><div class="bl bl3"></div></div>
+<div id="bg">
+  <div class="bl bl1"></div>
+  <div class="bl bl2"></div>
+  <div class="bl bl3"></div>
+  <div class="bl bl4"></div>
+</div>
+<div id="grid"></div>
 <canvas id="pts" style="position:fixed;inset:0;z-index:1;pointer-events:none"></canvas>
 <div id="cur"></div><div id="curR"></div>
 
 <div id="LP">
   <div class="ring-wrap">
-    <svg class="ring-svg" width="460" height="460" viewBox="0 0 460 460"><circle cx="230" cy="230" r="210" fill="none" stroke="url(#rg1)" stroke-width="1.5" stroke-dasharray="8 14" opacity=".6"/><defs><linearGradient id="rg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c6af5"/><stop offset="50%" stop-color="#ff6bac"/><stop offset="100%" stop-color="#00d4ff"/></linearGradient></defs></svg>
-    <svg class="ring-svg ring-svg2" width="460" height="460" viewBox="0 0 460 460"><circle cx="230" cy="230" r="185" fill="none" stroke="url(#rg2)" stroke-width="1" stroke-dasharray="4 20" opacity=".4"/><defs><linearGradient id="rg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7c6af5"/><stop offset="100%" stop-color="#ff6bac"/></linearGradient></defs></svg>
+    <svg class="ring-svg" width="500" height="500" viewBox="0 0 500 500"><circle cx="250" cy="250" r="230" fill="none" stroke="url(#rg1)" stroke-width="1.5" stroke-dasharray="8 16" opacity=".6"/><defs><linearGradient id="rg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c6af5"/><stop offset="50%" stop-color="#ff6bac"/><stop offset="100%" stop-color="#00d4ff"/></linearGradient></defs></svg>
+    <svg class="ring-svg ring-svg2" width="500" height="500" viewBox="0 0 500 500"><circle cx="250" cy="250" r="200" fill="none" stroke="url(#rg2)" stroke-width="1" stroke-dasharray="4 22" opacity=".4"/><defs><linearGradient id="rg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#7c6af5"/><stop offset="100%" stop-color="#ff6bac"/></linearGradient></defs></svg>
+    <svg class="ring-svg ring-svg3" width="500" height="500" viewBox="0 0 500 500"><circle cx="250" cy="250" r="165" fill="none" stroke="url(#rg3)" stroke-width="1" stroke-dasharray="2 28" opacity=".3"/><defs><linearGradient id="rg3" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#7c6af5"/></linearGradient></defs></svg>
   </div>
   <div class="lcard">
     <div class="ll"><div class="lgem">AA</div><div class="lname">Asliddin AI</div></div>
     <div class="ltag">Sun'iy intellekt platformasi</div>
     <div class="tabs"><button class="tab on" id="tl" onclick="stab('login')">Kirish</button><button class="tab" id="tr" onclick="stab('reg')">Ro'yxat</button></div>
     <div class="aerr" id="aerr"></div>
+
+    <!-- LOGIN -->
     <div id="fl">
       <div class="fi"><input type="email" id="le" placeholder="Email manzil" autocomplete="email"><span class="fic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div>
       <div class="fi"><input type="password" id="lp" placeholder="Parol" autocomplete="current-password"><span class="fic" onclick="tpwd('lp')" style="cursor:pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span></div>
       <div class="fgt"><a href="#">Parolni unutdingizmi?</a></div>
       <button class="abtn" id="lbtn" onclick="doLogin()">KIRISH</button>
-      <div class="dv"><span></span><p>yoki</p><span></span></div>
-      <div class="sr"><button class="sbtn2" onclick="socL('Google')"><span class="sico sico-g">G</span>Google</button><button class="sbtn2" onclick="socL('GitHub')"><span class="sico sico-gh">GH</span>GitHub</button><button class="sbtn2" onclick="socL('Telegram')"><span class="sico sico-tg">TG</span>Telegram</button></div>
+      <button class="demo-btn" onclick="doDemo()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Demo versiyani sinab ko'rish
+      </button>
+      <div class="dv"><span></span><p>muallif bilan bog'lanish</p><span></span></div>
+      <div class="socials">
+        <a class="slink tg" href="https://t.me/boboyev_asliddin" target="_blank"><span class="sico2 tg">TG</span>Telegram</a>
+        <a class="slink ig" href="https://instagram.com/boboyev_asliddin1" target="_blank"><span class="sico2 ig">IG</span>Instagram</a>
+        <a class="slink gm" href="mailto:boboyevasliddin2005@gmail.com"><span class="sico2 gm">@</span>Gmail</a>
+      </div>
     </div>
+
+    <!-- REGISTER -->
     <div id="fr" style="display:none">
       <div class="fi"><input type="text" id="rn" placeholder="To'liq ism"><span class="fic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span></div>
       <div class="fi"><input type="email" id="re" placeholder="Email manzil"><span class="fic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div>
       <div class="fi"><input type="password" id="rp" placeholder="Parol (kamida 6 belgi)"><span class="fic" onclick="tpwd('rp')" style="cursor:pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span></div>
       <button class="abtn" id="rbtn" onclick="doReg()">RO'YXATDAN O'TISH</button>
-      <div class="dv"><span></span><p>yoki</p><span></span></div>
-      <div class="sr"><button class="sbtn2" onclick="socL('Google')"><span class="sico sico-g">G</span>Google</button><button class="sbtn2" onclick="socL('GitHub')"><span class="sico sico-gh">GH</span>GitHub</button><button class="sbtn2" onclick="socL('Telegram')"><span class="sico sico-tg">TG</span>Telegram</button></div>
+      <button class="demo-btn" onclick="doDemo()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Demo versiyani sinab ko'rish
+      </button>
+      <div class="dv"><span></span><p>muallif bilan bog'lanish</p><span></span></div>
+      <div class="socials">
+        <a class="slink tg" href="https://t.me/boboyev_asliddin" target="_blank"><span class="sico2 tg">TG</span>Telegram</a>
+        <a class="slink ig" href="https://instagram.com/boboyev_asliddin1" target="_blank"><span class="sico2 ig">IG</span>Instagram</a>
+        <a class="slink gm" href="mailto:boboyevasliddin2005@gmail.com"><span class="sico2 gm">@</span>Gmail</a>
+      </div>
     </div>
   </div>
 </div>
@@ -210,9 +284,20 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;ov
     </div>
     <nav class="sbnav"><div class="navlbl">Suhbatlar</div><div id="hlist"></div></nav>
     <div class="sbf">
+      <div class="sb-socials">
+        <a class="sb-sl tg" href="https://t.me/boboyev_asliddin" target="_blank" title="Telegram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.269c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L6.18 14.067l-2.965-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.641.519z"/></svg>
+        </a>
+        <a class="sb-sl ig" href="https://instagram.com/boboyev_asliddin1" target="_blank" title="Instagram">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a class="sb-sl gm" href="mailto:boboyevasliddin2005@gmail.com" title="Gmail">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+        </a>
+      </div>
       <div class="urow">
         <div class="uav" id="uav">U</div>
-        <div class="ui"><div class="un" id="uname">Foydalanuvchi</div><div class="up">Asliddin AI</div></div>
+        <div class="ui"><div class="un" id="uname">Foydalanuvchi</div><div class="up" id="uplan">Asliddin AI</div></div>
         <button class="lout" onclick="doLogout()" title="Chiqish"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg></button>
       </div>
     </div>
@@ -260,9 +345,9 @@ body{font-family:var(--f);background:var(--bg);color:var(--text);height:100vh;ov
 <div class="toastEl" id="toastEl"></div>
 
 <script>
-const API = 'https://saytniki-production.up.railway.app';
+const API='https://saytniki-production.up.railway.app';
 let user=null,token=localStorage.getItem('aa_t')||null;
-let msgs=[],loading=false,chatId=null;
+let msgs=[],loading=false,chatId=null,isDemo=false;
 
 // CURSOR
 const cur=document.getElementById('cur'),curR=document.getElementById('curR');
@@ -276,8 +361,8 @@ document.addEventListener('mouseup',()=>{cur.style.transform='';curR.style.trans
 const cvs=document.getElementById('pts'),ctx=cvs.getContext('2d');
 cvs.width=innerWidth;cvs.height=innerHeight;
 window.addEventListener('resize',()=>{cvs.width=innerWidth;cvs.height=innerHeight;});
-const pts=Array.from({length:55},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.25,vy:(Math.random()-.5)*.25,r:Math.random()*1.4+.4,c:['rgba(124,106,245,','rgba(255,107,172,','rgba(0,212,255,'][Math.floor(Math.random()*3)]}));
-(function drawP(){ctx.clearRect(0,0,cvs.width,cvs.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>cvs.width)p.vx*=-1;if(p.y<0||p.y>cvs.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c+'.55)';ctx.fill();});pts.forEach((a,i)=>pts.slice(i+1).forEach(b=>{const d=Math.hypot(a.x-b.x,a.y-b.y);if(d<110){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle='rgba(124,106,245,'+(0.08*(1-d/110))+')';ctx.lineWidth=.5;ctx.stroke();}}));requestAnimationFrame(drawP);})();
+const pts=Array.from({length:60},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.4,c:['rgba(124,106,245,','rgba(255,107,172,','rgba(0,212,255,','rgba(127,255,110,'][Math.floor(Math.random()*4)]}));
+(function drawP(){ctx.clearRect(0,0,cvs.width,cvs.height);pts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>cvs.width)p.vx*=-1;if(p.y<0||p.y>cvs.height)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle=p.c+'.5)';ctx.fill();});pts.forEach((a,i)=>pts.slice(i+1).forEach(b=>{const d=Math.hypot(a.x-b.x,a.y-b.y);if(d<120){ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.strokeStyle='rgba(124,106,245,'+(0.07*(1-d/120))+')';ctx.lineWidth=.5;ctx.stroke();}}));requestAnimationFrame(drawP);})();
 
 // AUTO LOGIN
 window.addEventListener('DOMContentLoaded',async()=>{
@@ -294,13 +379,19 @@ function stab(t){
 function serr(m){const e=document.getElementById('aerr');e.textContent=m;e.classList.add('on');}
 function clrE(){document.getElementById('aerr').classList.remove('on');}
 function tpwd(id){const i=document.getElementById(id);i.type=i.type==='password'?'text':'password';}
-function socL(p){showToast(p+' orqali kirish tez orada');}
+
+// DEMO LOGIN
+function doDemo(){
+  isDemo=true;
+  loginOk({name:'Demo',id:'demo'});
+  showToast('Demo rejimda ishlamoqdasiz');
+}
 
 async function doLogin(){
   const em=document.getElementById('le').value.trim(),pw=document.getElementById('lp').value;
   clrE();if(!em||!pw){serr('Email va parolni kiriting.');return;}if(!em.includes('@')){serr('Email notogri.');return;}
   const btn=document.getElementById('lbtn');btn.textContent='Kirilmoqda...';btn.disabled=true;
-  try{const r=await fetch(API+'/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,password:pw})});const d=await r.json();if(!r.ok){serr(d.detail||'Xatolik.');return;}token=d.token;localStorage.setItem('aa_t',token);loginOk({name:d.username,id:d.user_id});}
+  try{const r=await fetch(API+'/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email:em,password:pw})});const d=await r.json();if(!r.ok){serr(d.detail||'Xatolik.');return;}token=d.token;localStorage.setItem('aa_t',token);isDemo=false;loginOk({name:d.username,id:d.user_id});}
   catch{serr('Serverga ulanib bolmadi.');}finally{btn.textContent='KIRISH';btn.disabled=false;}
 }
 
@@ -308,23 +399,27 @@ async function doReg(){
   const nm=document.getElementById('rn').value.trim(),em=document.getElementById('re').value.trim(),pw=document.getElementById('rp').value;
   clrE();if(!nm){serr('Ismingizni kiriting.');return;}if(!em||!em.includes('@')){serr('Togri email kiriting.');return;}if(pw.length<6){serr('Parol kamida 6 belgi.');return;}
   const btn=document.getElementById('rbtn');btn.textContent="Royxatdan otilmoqda...";btn.disabled=true;
-  try{const r=await fetch(API+'/api/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:nm,email:em,password:pw})});const d=await r.json();if(!r.ok){serr(d.detail||'Xatolik.');return;}token=d.token;localStorage.setItem('aa_t',token);loginOk({name:d.username,id:d.user_id});}
+  try{const r=await fetch(API+'/api/register',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:nm,email:em,password:pw})});const d=await r.json();if(!r.ok){serr(d.detail||'Xatolik.');return;}token=d.token;localStorage.setItem('aa_t',token);isDemo=false;loginOk({name:d.username,id:d.user_id});}
   catch{serr('Serverga ulanib bolmadi.');}finally{btn.textContent="RO'YXATDAN O'TISH";btn.disabled=false;}
 }
 
 function loginOk(u,anim=true){
-  user=u;document.getElementById('uav').textContent=u.name[0].toUpperCase();document.getElementById('uname').textContent=u.name;
+  user=u;
+  document.getElementById('uav').textContent=u.name[0].toUpperCase();
+  document.getElementById('uname').textContent=u.name;
+  document.getElementById('uplan').textContent=isDemo?'Demo rejim':'Asliddin AI';
   const lp=document.getElementById('LP');
-  if(anim){lp.classList.add('out');setTimeout(()=>{lp.style.display='none';document.getElementById('CA').classList.add('on');loadHL();document.getElementById('inp').focus();},600);}
-  else{lp.style.display='none';document.getElementById('CA').classList.add('on');loadHL();}
+  if(anim){lp.classList.add('out');setTimeout(()=>{lp.style.display='none';document.getElementById('CA').classList.add('on');if(!isDemo)loadHL();document.getElementById('inp').focus();},600);}
+  else{lp.style.display='none';document.getElementById('CA').classList.add('on');if(!isDemo)loadHL();}
 }
 
 function doLogout(){
   if(!confirm('Chiqishni istaysizmi?'))return;
-  token=null;localStorage.removeItem('aa_t');user=null;msgs=[];chatId=null;
+  token=null;localStorage.removeItem('aa_t');user=null;msgs=[];chatId=null;isDemo=false;
   document.getElementById('mw').innerHTML='';document.getElementById('CA').classList.remove('on');
   const lp=document.getElementById('LP');lp.style.display='flex';lp.classList.remove('out');
   document.getElementById('le').value='';document.getElementById('lp').value='';clrE();
+  document.getElementById('hlist').innerHTML='';
 }
 
 async function apireq(path,method='GET',body=null){
@@ -334,7 +429,10 @@ async function apireq(path,method='GET',body=null){
   if(!r.ok)throw new Error(d.detail||'Xatolik');return d;
 }
 
-async function loadHL(){try{const c=await apireq('/api/chats');renderHL(c);}catch{}}
+async function loadHL(){
+  if(isDemo)return;
+  try{const c=await apireq('/api/chats');renderHL(c);}catch{}
+}
 function renderHL(chats){
   const l=document.getElementById('hlist');
   if(!chats.length){l.innerHTML='<div style="padding:8px;font-size:12px;color:var(--t3)">Hali suhbat yoq</div>';return;}
@@ -342,6 +440,7 @@ function renderHL(chats){
 }
 
 async function loadChat(id,title){
+  if(isDemo)return;
   chatId=id;msgs=[];document.getElementById('mw').innerHTML='';
   const w=document.getElementById('wlc');if(w)w.remove();closeSB();
   document.querySelectorAll('.crow').forEach(e=>e.classList.toggle('on',e.querySelector('.ctxt')?.textContent===title));
@@ -355,12 +454,28 @@ async function delChat(e,id){
   catch{showToast('Xatolik');}
 }
 
+// DEMO REPLIES
+const demoReplies={
+  default:['Salom! Men Asliddin AI — Asliddin Boboyev tomonidan yaratilgan sun\'iy intellekt.\n\nDemo rejimdasiz. To\'liq funksiyalardan foydalanish uchun ro\'yxatdan o\'ting!','Bu juda qiziqarli savol! Demo rejimda cheklangan javob beraman.\n\nTo\'liq tajriba uchun **ro\'yxatdan o\'ting** — bepul!','Ajoyib! Asliddin AI siz bilan ishlashdan mamnun.\n\n**Demo** — cheklangan rejim. **Ro\'yxatdan o\'tish** — to\'liq imkoniyatlar!'],
+};
+
 async function sendMsg(){
   const inp=document.getElementById('inp'),txt=inp.value.trim();
   if(!txt||loading)return;
   inp.value='';arz(inp);ucc();hideWlc();
   addMsg('u',txt);msgs.push({role:'user',content:txt});
   loading=true;document.getElementById('sndbtn').disabled=true;showTyp();
+
+  if(isDemo){
+    // Demo rejim
+    await new Promise(r=>setTimeout(r,800+Math.random()*600));
+    hideTyp();
+    const r=demoReplies.default[Math.floor(Math.random()*demoReplies.default.length)];
+    addMsg('ai',r,true);
+    loading=false;document.getElementById('sndbtn').disabled=false;stb();
+    return;
+  }
+
   try{
     if(!chatId){const nc=await apireq('/api/chats','POST',{title:txt.substring(0,40)});chatId=nc.chat_id;loadHL();}
     const d=await apireq('/api/chat','POST',{message:txt,chat_id:chatId});
@@ -384,7 +499,7 @@ function showTyp(){const w=document.getElementById('mw');const d=document.create
 function hideTyp(){const e=document.getElementById('tyi');if(e)e.remove();}
 function hideWlc(){const w=document.getElementById('wlc');if(w){w.style.transition='opacity .25s,transform .25s';w.style.opacity='0';w.style.transform='scale(.96)';setTimeout(()=>w.remove(),280);}}
 function wHTML(){return '<div class="wlc" id="wlc"><div class="worb">AA</div><div class="wt"><span class="hi">Salom! Men </span><span class="gn">Asliddin AI</span></div><div class="ws">Asliddin Boboyev tomonidan yaratilgan sun\'iy intellekt.</div><div class="sg"><div class="sc" onclick="sugg(\'Python dasturlash\')"><span class="si2">💻</span><div class="st">Dasturlash</div><div class="sd">Kod yozish</div></div><div class="sc" onclick="sugg(\'Ijodiy hikoya\')"><span class="si2">✍️</span><div class="st">Ijod</div><div class="sd">Hikoya, she\'r</div></div></div></div>';}
-function clearChat(){msgs=[];chatId=null;document.getElementById('mw').innerHTML='';if(!document.getElementById('wlc'))document.getElementById('ca').insertAdjacentHTML('afterbegin',wHTML());showToast('Yangi suhbat');}
+function clearChat(){msgs=[];if(!isDemo)chatId=null;document.getElementById('mw').innerHTML='';if(!document.getElementById('wlc'))document.getElementById('ca').insertAdjacentHTML('afterbegin',wHTML());showToast('Yangi suhbat');}
 async function newChat(){clearChat();closeSB();}
 function stb(){const a=document.getElementById('ca');setTimeout(()=>a.scrollTo({top:a.scrollHeight,behavior:'smooth'}),40);}
 function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\n/g,'<br>');}
